@@ -11,3 +11,11 @@ String.prototype.toLowerCase2 = toLowerCase2;
 let str = "AAAS";
 
 console.log(str.toLowerCase2(str));
+
+const toLowerCase = function (str) {
+    return str.split('').map(char=>String.fromCharCode(char.charCodeAt(0)+32)).join('');
+}
+
+let str2 = "AAABBS";
+
+console.log(toLowerCase(str2));
