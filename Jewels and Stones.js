@@ -30,6 +30,11 @@ const numJewelsInStones = (J,S)=>{
     return S.split('').filter(sletter=>J.indexOf(sletter)!==-1).length;
 }
 
+//better
+const numJewelsInStones = (J,S)=>{
+    return S.split('').filter(sletter=>J.includes(sletter)).length;
+}
+
 /*const numJewelsInStones = (J,S)=>{
     let S_arr = S.split('');
    console.log(S_arr.map(letter=>{
