@@ -13,7 +13,7 @@ let str = "AAAS";
 console.log(str.toLowerCase2(str));
 
 const toLowerCase = function (str) {
-    return str.split('').map(char=>String.fromCharCode(char.charCodeAt(0)+32)).join('');
+    return str.split('').map(char=>char.charCodeAt(0)<=90&&char.charCodeAt(0)>=65? String.fromCharCode(char.charCodeAt(0)+32):char).join('');
 }
 
 let str2 = "AAABBS";
