@@ -12,20 +12,11 @@ var findWords = function(words) {
    return words.filter(word=>{
 
         if(row1.includes(word[0].toUpperCase())){
-            /*return [...word.toUpperCase()].every(letter=>{
-                row1.includes(letter);
-            })*/
-            return true;
+            return [...word.toUpperCase()].every(letter=>row1.includes(letter));
         }else if(row2.includes(word[0].toUpperCase())){
-            /*return [...word.toUpperCase()].every(letter=>{
-                row2.includes(letter);
-            })*/
-            return false;
+            return [...word.toUpperCase()].every(letter=>row2.includes(letter));
         }else{
-            /*return [...word.toUpperCase()].every(letter=>{
-                row3.includes(letter);
-            })*/
-            return false;
+            return [...word.toUpperCase()].every(letter=>row3.includes(letter));
         }
     })
 
