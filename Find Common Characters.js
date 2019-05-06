@@ -26,6 +26,9 @@ var commonChars = function(A) {
     return result;
 
 
+    //答案错误。。 另想解法
+
+
 };
 
 let arr = ["bella","label","roller"];
