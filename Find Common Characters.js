@@ -3,15 +3,22 @@
 * Given an array A of strings made only from lowercase letters, return a list of all characters that show up in all strings within the list (including duplicates).
 * */
 
+/*示例 1：
+输入：["bella","label","roller"]
+输出：["e","l","l"]
+
+示例 2：
+输入：["cool","lock","cook"]
+输出：["c","o"]*/
+
 /**
  * @param {string[]} A
  * @return {string[]}
  */
 var commonChars = function(A) {
 
-
-
-    let temp = A.join('');
+    //错误解法❌
+    /*let temp = A.join('');
     let result = [];
 
 
@@ -23,10 +30,21 @@ var commonChars = function(A) {
         }
     }
 
-    return result;
-
-
+    return result;*/
     //答案错误。。 另想解法
+
+    //太绝了 这个解法!!
+    return A.reduce((acc, i) => {
+        return Array.from(i).filter((c) => {
+            const index = acc.indexOf(c);
+            if(index >= 0) {
+                acc.splice(index, 1)
+                return c;
+            }
+        })
+    }, A[0].split(''));
+
+
 
 
 };
