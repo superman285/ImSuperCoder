@@ -33,7 +33,9 @@ var commonChars = function(A) {
     return result;*/
     //答案错误。。 另想解法
 
-    //太绝了 这个解法!!
+    //太绝了 这个解法!! 从第0个开始0、1、2 依次和前一个对比
+    //0对比0 1对比0 2对比1
+    //重复的字符要处理下 干掉 acc.splice
     return A.reduce((acc, i) => {
         return Array.from(i).filter((c) => {
             const index = acc.indexOf(c);
