@@ -48,6 +48,8 @@
 
 // 思路对了 但是判断方式没想出来 搞那么复杂。
 
+// 不要钻牛角 逆向思维一下  https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/solution/bo-yang-cong-yi-ceng-yi-ceng-cong-ju-zhen-zhong-bo/
+
 /*
 * 1 2 3 4 5
 * 4 3 2 1 6
