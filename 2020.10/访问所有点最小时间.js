@@ -33,3 +33,13 @@ var minTimeToVisitAllPoints = function(points) {
 	}
 	return sum
 };
+
+var minTimeToVisitAllPoints = function(points) {
+
+	points.reduce((prev,cur,idx) => {
+		// idx 为0时 不做操作 为了拿前一项做操作
+		if(idx !== 0){
+			return prev += Math.max(Math.abs(cur[0]-points[idx-1][0]),Math.abs(cur[1]-points[idx-1][1]))
+		}
+	},0)
+};
