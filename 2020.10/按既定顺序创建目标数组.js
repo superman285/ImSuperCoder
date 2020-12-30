@@ -28,6 +28,16 @@ nums       index     target
 * */
 
 /**
+ * @param {number} idx
+ * @param {any} value
+ * @return {void}
+ */
+var add = function(idx,value) {
+	this.splice(idx,0,value)
+}
+Array.prototype.add = add
+
+/**
  * @param {number[]} nums
  * @param {number[]} index
  * @return {number[]}
@@ -36,6 +46,7 @@ var createTargetArray = function(nums, index) {
 	let ret = [];
 	index.forEach((num,idx) => {
 		ret.splice(num,0,nums[idx])
+		// or ret.add(num,nums[idx])
 	})
 	return ret;
 };
